@@ -89,10 +89,10 @@ img {
 header {
   background-color: #03072b;
   background-repeat: no-repeat;
-  background-image: url("./Diwali/back3.jpeg"), url("./Diwali/back4.jpeg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: left, right;
-  background-size: 50%, 50%;
+  background-image: url("./Diwali/back3.jpeg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
 }
 
 header p {
@@ -152,12 +152,16 @@ header p {
     text-align: center;
   }
 
-  .header-text {
-    margin: auto;
+  .container .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  h1 {
-    margin: auto;
+  .container .header-text h1 {
+    font-size: 3rem;
+    font-weight: bolder;
   }
 
   img {
