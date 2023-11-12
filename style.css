@@ -10,20 +10,21 @@ body {
   line-height: 1.5;
   color: #333;
   background: #010629e3;
+  transition: all 0.5s ease;
 }
 
 .navbar {
   background-color: #0106299d;
   color: azure;
   font-weight: 800;
-  /* border: 2px solid #010629e3; */
+  border: 2px solid #010629e3;
   box-shadow: 2px 4px 4px rgba(247, 3, 3, 0.778); /* Adjust as needed */
 }
 
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 2 2px;
 }
 
 .navbar .container {
@@ -110,6 +111,8 @@ header p {
   background-repeat: no-repeat, no-repeat;
   background-position: left, right;
   background-size: 50%, 50%;
+
+  margin-bottom: 60px;
 }
 
 .boxes .container {
@@ -178,4 +181,106 @@ header p {
     display: block;
     text-align: center;
   }
+
+  footer .footer-title {
+    display: none;
+    text-shadow: #fff;
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  footer .container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    top: 20px;
+    justify-content: space-between;
+    min-height: calc(100% - 60px);
+  }
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #1c2140;
+  border-radius: 20px;
+  border: 0.5px solid #010629e3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 20px;
+}
+
+footer li {
+  list-style: none;
+  margin: 10px;
+}
+
+footer .footer-title {
+  text-shadow: #fff;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+footer .container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  top: 20px;
+  justify-content: space-between;
+  min-height: calc(100% - 60px);
+}
+
+footer .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer .copyright {
+  margin: 0;
+  font-size: large;
+  color: #333;
+}
+
+footer .copyright-name {
+  font-size: larger;
+  margin: 0.5em;
+}
+
+footer .list-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer hr {
+  width: 100%;
+  margin: 1rem 0.5rem;
+  border: none;
+  border-top: 1px solid rgb(83, 83, 83);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  font-size: 24px;
+}
+
+footer .text-center {
+  text-align: center;
 }
