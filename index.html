@@ -13,20 +13,21 @@
 </head>
 
 <body>
+    <canvas id="myCanvas"></canvas>
 
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Flexbox</div>
+            <div class="logo">Happy Diwali</div>
             <ul class="nav">
                 <li>
-                    <a href="#">Home</a>
+                    <!-- <a href="#">Home</a> -->
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <!-- <a href="#">About</a> -->
 
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <!-- <a href="#">Contact</a> -->
                 </li>
             </ul>
         </div>
@@ -35,11 +36,11 @@
         <div class="container">
             <div class="header-text">
 
-                <h1>FlexBox Crash Course</h1>
-                <p>This course was created by neeraj butola to help you learn the basics of flexbox. Flexbox is a very
-                    important and useful tool in CSS. </p>
+                <h1>Happy Diwali!!</h1>
+                <p>May the divine light of Diwali bring peace, prosperity, and happiness to your life. Happy Diwali!
+                </p>
             </div>
-            <img src="./boximg.svg" alt="">
+            <img src="./Diwali/diwali1.jpeg" alt="">
         </div>
     </header>
 
@@ -47,30 +48,66 @@
     <section class="boxes">
         <div class="container">
             <div class="box">
-                <h2>Alignment & Space</h2>
-                <p>A more efficient way to lay out ,align and distribute space among items in a container.</p>
+                <h2>Joy</h2>
+                <p>May the joyous celebration of Diwali fill your heart with never ending joy and happiness.</p>
+                <img src="./Diwali/diwali2.jpeg" alt="">
 
             </div>
 
 
             <div class="box">
-                <h2>Tricky Positioning</h2>
-                <p>FlexBox usually solves tricky problems including how to position or dynamically resize elements on
-                    the page.</p>
-
-
-            </div>
-
-            <div class="box">
-                <h2>Responsive Design</h2>
-                <p>
-                    FlexBox makes building a website layout (and also making it Responsive) much easier.
+                <h2>Prosperity</h2>
+                <p>Wishing you a Diwali that brings prosperity to your life along with the blessing of Goddess Lakshmi.
                 </p>
+                <img src="./Diwali/diwali3.jpeg" alt="">
+
+
+            </div>
+
+            <div class="box">
+                <h2>Peace</h2>
+                <p>
+                    May the divine light of Diwali spread peace, prosperity, and happiness into your life.”
+                </p>
+                <img src="./Diwali/diwali4.jpeg" alt="">
 
             </div>
         </div>
 
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        setInterval(function () {
+            const particleCount = 50;
+
+            // since particles fall down, start a bit higher than random
+            confetti(
+                Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                })
+            );
+            confetti(
+                Object.assign({}, defaults, {
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                })
+            );
+        }, 2500);
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>

@@ -9,17 +9,19 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #333;
-  background: #a1c3ff;
+  background: #010629e3;
 }
 
 .navbar {
-  background-color: #3474e6;
+  background-color: #0106299d;
   color: azure;
   font-weight: 800;
+  /* border: 2px solid #010629e3; */
+  box-shadow: 2px 4px 4px rgba(247, 3, 3, 0.778); /* Adjust as needed */
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 0px;
 }
@@ -72,6 +74,9 @@ header .container {
 img {
   height: 400px;
   width: 400px;
+  padding: 5px;
+
+  margin: 5px;
 }
 
 .header-text {
@@ -82,7 +87,12 @@ img {
 }
 
 header {
-  background-color: #0151cc;
+  background-color: #03072b;
+  background-repeat: no-repeat;
+  background-image: url("./Diwali/back3.jpeg"), url("./Diwali/back4.jpeg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-size: 50%, 50%;
 }
 
 header p {
@@ -93,9 +103,18 @@ header p {
   line-height: 1.5;
 }
 
+.boxes {
+  background-repeat: no-repeat;
+  background-image: url("./Diwali/diwaliback2.jpeg"),
+    url("./Diwali/diwaliback1.jpeg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-size: 50%, 50%;
+}
+
 .boxes .container {
   display: flex;
-
+  max-width: 1400px;
   justify-content: space-between;
 }
 
@@ -106,10 +125,16 @@ header p {
   padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-  background-color: #0151cc;
+  background-color: #57101a;
 }
 .header-text h1 {
   font-size: 2.5rem;
+}
+
+#myCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (max-width: 768px) {
@@ -125,6 +150,24 @@ header p {
     align-self: center;
     justify-self: center;
     text-align: center;
+  }
+
+  .header-text {
+    margin: auto;
+  }
+
+  h1 {
+    margin: auto;
+  }
+
+  img {
+    height: 300px;
+    width: 300px;
+    padding: 2px;
+
+    margin: 2px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
   }
 
   .boxes .container {
