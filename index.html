@@ -9,15 +9,23 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Happy Diwali 🕉</title>
+    <title>Merry Christmas</title>
 </head>
 
 <body>
+
     <canvas id="myCanvas"></canvas>
+    <div style="display: flex; justify-content: center;">
+        <audio controls>
+            <source src="Pandoru.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
 
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Happy Diwali</div>
+            <div class="logo">Merry Christmas</div>
             <ul class="nav">
                 <li>
                     <!-- <a href="#">Home</a> -->
@@ -32,34 +40,51 @@
             </ul>
         </div>
     </nav>
+
+
+
     <header>
         <div class="container">
             <div class="header-text">
 
-                <h1>Subh Deepawali! </h1>
-                <p>May the divine light of Diwali bring peace, prosperity, and happiness to your life. Happy Diwali!
-                </p>
+                <h1 style="text-shadow: 2px 2px 16px black;">Merry Christmas! </h1>
+                <div style="display: flex;   align-items: center;
+    justify-items: center;
+    text-align: center;">
+                    <p style="white-space: pre; text-shadow: 2px 2px 16px black;">
+                        "HASHIRE SORI YO
+                        KAZE NO YOU NI
+                        TSUKIMIHARA WO
+                        PADORU PADORU"
+                    </p>
+                </div>
+
+
+
             </div>
-            <img src="./Diwali/diwali1.jpeg" alt="">
+            <img src="./Christmas/padouru.jpeg" alt="">
         </div>
     </header>
+
+
 
 
     <section class="boxes">
         <div class="container">
             <div class="box">
                 <h2>Joy</h2>
-                <p>May the joyous celebration of Diwali fill your heart with never ending joy and happiness.</p>
-                <img src="./Diwali/diwali2.jpeg" alt="">
+                <p>Merry Christmas! May your heart be light and your celebrations be joyful.</p>
+                <img src="./Christmas/Christmas2.jpeg" alt="">
 
             </div>
 
 
             <div class="box">
                 <h2>Prosperity</h2>
-                <p>Wishing you a Diwali that brings prosperity to your life along with the blessing of Goddess Lakshmi.
+                <p>Wishing you a Christmas that brings prosperity to your life along with the blessing of Goddess
+                    .
                 </p>
-                <img src="./Diwali/diwali3.jpeg" alt="">
+                <img src="./Christmas/Christmas3.jpeg" alt="">
 
 
             </div>
@@ -67,24 +92,31 @@
             <div class="box">
                 <h2>Peace</h2>
                 <p>
-                    May the divine light of Diwali spread peace, prosperity, and happiness into your life.”
+                    May the divine light of Christmas spread peace, prosperity, and happiness into your life.”
                 </p>
-                <img src="./Diwali/diwali4.jpeg" alt="">
+                <img src="./Christmas/Christmas4.jpeg" alt="">
 
             </div>
         </div>
 
     </section>
 
+    <Section>
+        <div style="display: flex; align-items: center; justify-content: center;" class="imageContainer">
+            <img src="./Christmas/Christmas5.jpeg" alt="Description of the image" style="width: 80%; height: 80%;">
+        </div>
+    </Section>
+
+
     <footer>
         <div class="container">
             <div class="row">
-                <h4 class="footer-title">Happiesdiwali</h4>
+                <h4 class="footer-title">HappiesChristmas</h4>
             </div>
             <div class="row footer-links">
                 <ul>
                     <li>
-                        <a href="https://github.com/Frostdev7506/Happiesdiwali/tree/diwali">Github</a>
+                        <a href="https://github.com/Frostdev7506/HappiesChristmas/tree/Christmas">Github</a>
                     </li>
                     <li>
                         <a href="#">Privacy</a>
@@ -99,35 +131,46 @@
         <div class="text-center">
             <p class="copyright">
                 &copy; 2023
-                <span class="copyright-name">Happiesdiwali</span>
+                <span class="copyright-name">HappiesChristmas</span>
             </p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
     <script>
-        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+        let skew = 1;
 
         function randomInRange(min, max) {
             return Math.random() * (max - min) + min;
         }
 
-        setInterval(function () {
-            const particleCount = 50;
+        (function frame() {
+            const ticks = Math.max(200, 500);
 
-            // since particles fall down, start a bit higher than random
-            confetti(
-                Object.assign({}, defaults, {
-                    particleCount,
-                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-                })
-            );
-            confetti(
-                Object.assign({}, defaults, {
-                    particleCount,
-                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-                })
-            );
-        }, 1500);
+            skew = Math.max(0.8, skew - 0.001);
+
+            confetti({
+                particleCount: 1,
+                startVelocity: 0,
+                ticks: ticks,
+                origin: {
+                    x: Math.random(),
+                    // since particles fall down, skew start toward the top
+                    y: Math.random() * skew - 0.2,
+                },
+                colors: ["#ffffff"],
+                shapes: ["circle"],
+                gravity: randomInRange(0.4, 0.6),
+                scalar: randomInRange(0.4, 1),
+                drift: randomInRange(-0.4, 0.4),
+            });
+
+            requestAnimationFrame(frame);
+        })();
+
+        document.getElementById('myAudio').addEventListener('click', function (e) {
+            e.currentTarget.muted = false;
+        });
+
     </script>
 
 
